@@ -1,0 +1,147 @@
+/* ==============================
+   OctoFit Tracker – Global Styles
+   ============================== */
+
+/* Base */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e9ecef;
+}
+
+/* ── Navbar ── */
+.navbar {
+  background: linear-gradient(90deg, #0d1117 0%, #161b22 100%) !important;
+  border-bottom: 2px solid #0d6efd;
+  box-shadow: 0 2px 12px rgba(13, 110, 253, 0.35);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+  color: #58a6ff !important;
+}
+
+.navbar-brand img {
+  height: 36px;
+  margin-right: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(88, 166, 255, 0.5);
+}
+
+.nav-link {
+  color: #c9d1d9 !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #58a6ff !important;
+}
+
+.nav-link.active {
+  color: #58a6ff !important;
+  font-weight: 700;
+  border-bottom: 2px solid #58a6ff;
+}
+
+/* ── Page heading ── */
+.octofit-heading {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #58a6ff;
+  text-shadow: 0 0 12px rgba(88, 166, 255, 0.4);
+  margin-bottom: 1.2rem;
+}
+
+/* ── Cards ── */
+.octofit-card {
+  border: 1px solid #30363d;
+  border-radius: 0.85rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  background-color: #161b22;
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, #0d6efd 0%, #0dcaf0 100%) !important;
+  color: #fff !important;
+  border-radius: 0.75rem 0.75rem 0 0 !important;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+}
+
+/* ── Tables ── */
+.octofit-table {
+  color: #c9d1d9;
+  background-color: #161b22;
+}
+
+.octofit-table thead th {
+  background-color: #0d1117 !important;
+  color: #58a6ff !important;
+  border-color: #30363d;
+  white-space: nowrap;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.octofit-table tbody tr {
+  border-color: #21262d;
+}
+
+.octofit-table tbody tr:hover {
+  background-color: rgba(88, 166, 255, 0.1) !important;
+  color: #ffffff;
+}
+
+.octofit-table tbody td {
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+.octofit-table .table-warning {
+  background-color: rgba(255, 193, 7, 0.15) !important;
+}
+
+/* ── Badges ── */
+.badge.bg-primary   { background-color: #0d6efd !important; }
+.badge.bg-secondary { background-color: #6c757d !important; }
+.badge.bg-success   { background-color: #198754 !important; }
+.badge.bg-info      { background-color: #0dcaf0 !important; color: #000 !important; }
+.badge.bg-warning   { background-color: #ffc107 !important; color: #000 !important; }
+.badge.bg-dark      { background-color: #0d1117 !important; border: 1px solid #30363d; }
+
+/* ── Links ── */
+a.link-primary {
+  color: #58a6ff !important;
+  text-decoration: none;
+}
+a.link-primary:hover {
+  text-decoration: underline;
+  color: #79bfff !important;
+}
+
+/* ── Alerts ── */
+.alert-danger {
+  background-color: #3d1f1f;
+  border-color: #f85149;
+  color: #ffa198;
+}
+
+/* ── Spinner ── */
+.spinner-border { width: 2.5rem; height: 2.5rem; }
+
+/* ── Footer ── */
+.octofit-footer {
+  background: linear-gradient(90deg, #0d1117 0%, #161b22 100%);
+  border-top: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 0.85rem;
+  padding: 1.2rem 0;
+  margin-top: 3rem;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
