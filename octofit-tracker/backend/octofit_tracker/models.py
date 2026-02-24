@@ -10,14 +10,14 @@ class Team(models.Model):
 class User(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
-    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='members')
+    team = models.CharField(max_length=100)  # stores team name
     class Meta:
         db_table = 'users'
     def __str__(self):
         return self.name
 
 class Activity(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='activities')
+    user = models.CharField(max_length=100)  # stores user email
     type = models.CharField(max_length=100)
     duration = models.IntegerField()
     date = models.DateField()
@@ -32,7 +32,7 @@ class Workout(models.Model):
         db_table = 'workouts'
 
 class Leaderboard(models.Model):
-    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='leaderboard')
+    team = models.CharField(max_length=100)  # stores team name
     points = models.IntegerField()
     class Meta:
         db_table = 'leaderboard'

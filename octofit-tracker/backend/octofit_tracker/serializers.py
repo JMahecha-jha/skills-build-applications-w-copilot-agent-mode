@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import User, Team, Activity, Workout, Leaderboard
-from bson import ObjectId
 
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,18 +7,14 @@ class TeamSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
-    team = TeamSerializer(read_only=True)
-    team_id = serializers.PrimaryKeyRelatedField(queryset=Team.objects.all(), source='team', write_only=True)
     class Meta:
         model = User
-        fields = ['id', 'name', 'email', 'team', 'team_id']
+        fields = '__all__'
 
 class ActivitySerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
-    user_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), source='user', write_only=True)
     class Meta:
         model = Activity
-        fields = ['id', 'user', 'user_id', 'type', 'duration', 'date']
+        fields = '__all__'
 
 class WorkoutSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,8 +22,6 @@ class WorkoutSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class LeaderboardSerializer(serializers.ModelSerializer):
-    team = TeamSerializer(read_only=True)
-    team_id = serializers.PrimaryKeyRelatedField(queryset=Team.objects.all(), source='team', write_only=True)
     class Meta:
         model = Leaderboard
-        fields = ['id', 'team', 'team_id', 'points']
+        fields = '__all__'
